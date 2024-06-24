@@ -71,6 +71,7 @@ public class ApiGatewayApplication {
      */
     @Bean
     RouterFunction<?> routerFunction() {
+        @SuppressWarnings({ "null", "rawtypes" })
         RouterFunction router = RouterFunctions.resources("/**", new ClassPathResource("static/"))
             .andRoute(RequestPredicates.GET("/"),
                 request -> ServerResponse.ok().contentType(MediaType.TEXT_HTML).bodyValue(indexHtml));

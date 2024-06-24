@@ -24,6 +24,7 @@ import lombok.Value;
 /**
  * @author Maciej Szarlinski
  */
+@SuppressWarnings("unused")
 @Value
 public class Visits {
 

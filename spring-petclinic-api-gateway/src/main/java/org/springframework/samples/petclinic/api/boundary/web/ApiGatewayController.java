@@ -43,6 +43,7 @@ public class ApiGatewayController {
 
     private final VisitsServiceClient visitsServiceClient;
 
+    @SuppressWarnings("rawtypes")
     private final ReactiveCircuitBreakerFactory cbFactory;
 
     @GetMapping(value = "owners/{ownerId}")

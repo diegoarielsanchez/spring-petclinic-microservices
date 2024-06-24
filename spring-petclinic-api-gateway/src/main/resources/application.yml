@@ -12,6 +12,12 @@ spring:
             - Path=/api/vet/**
           filters:
             - StripPrefix=2
+        - id: prescribers-service
+          uri: lb://prescribers-service
+          predicates:
+            - Path=/api/prescriber/**
+          filters:
+            - StripPrefix=2
         - id: visits-service
           uri: lb://visits-service
           predicates:
